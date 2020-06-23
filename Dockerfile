@@ -5,7 +5,8 @@ RUN sudo unzip awscli-bundle.zip && sudo ./awscli-bundle/install -i /usr/local/a
 
 # ref: https://github.com/git-lfs/git-lfs/wiki/Installation#docker-recipes
 RUN build_deps="curl" && \
-    DEBIAN_FRONTEND=noninteractive sudo apt-get install -y --no-install-recommends ${build_deps} ca-certificates && \
+	DEBIAN_FRONTEND=noninteractive sudo apt-get update && \
+    DEBIAN_FRONTEND=noninteractive sudo apt-get install -y --no-install-recommends ${build_deps} ca-certificates  graphicsmagick imagemagick ghostscript && \
     curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash && \
     DEBIAN_FRONTEND=noninteractive sudo apt-get install -y --no-install-recommends git-lfs && \
     git lfs install && \
