@@ -1,4 +1,4 @@
-FROM circleci/node:12.16-browsers
+FROM circleci/node:12.18-browsers
 
 ADD https://s3.amazonaws.com/aws-cli/awscli-bundle.zip awscli-bundle.zip
 RUN sudo unzip awscli-bundle.zip && sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
