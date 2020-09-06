@@ -12,3 +12,6 @@ RUN build_deps="curl" && \
     git lfs install && \
     DEBIAN_FRONTEND=noninteractive sudo apt-get purge -y --auto-remove ${build_deps} && \
     sudo rm -r /var/lib/apt/lists/*
+
+RUN sudo apt update && \
+    sudo apt-get install -y fonts-noto-cjk
