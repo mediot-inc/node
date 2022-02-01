@@ -1,4 +1,4 @@
-FROM circleci/node:12.22-browsers
+FROM circleci/node:16.13-browsers
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -14,3 +14,6 @@ RUN build_deps="" \
     && sudo rm -r /var/lib/apt/lists/* \
     && sudo unzip awscli-bundle.zip \
     && sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+
+# https://stackoverflow.com/questions/52998331/imagemagick-security-policy-pdf-blocking-conversion
+RUN sudo sed -i '/disable ghostscript format types/,+6d' /etc/ImageMagick-6/policy.xml
