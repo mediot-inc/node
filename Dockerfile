@@ -7,7 +7,7 @@ ADD https://s3.amazonaws.com/aws-cli/awscli-bundle-1.18.223.zip awscli-bundle.zi
 # ref: https://github.com/git-lfs/git-lfs/wiki/Installation#docker-recipes
 RUN build_deps="" \
 	&& sudo apt-get update \
-    && sudo apt-get install -y --no-install-recommends ca-certificates graphicsmagick imagemagick ghostscript fonts-noto-cjk build-essential \
+    && sudo apt-get install -y --no-install-recommends ca-certificates graphicsmagick imagemagick ghostscript fonts-noto-cjk build-essential cmake \
     && curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash \
     && sudo apt-get install -y --no-install-recommends git-lfs \
     && git lfs install \
