@@ -1,4 +1,4 @@
-FROM circleci/node:16.13-browsers
+FROM circleci/node:20.10-browsers
 
 ENV DEBIAN_FRONTEND=noninteractive
 
