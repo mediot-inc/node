@@ -1,4 +1,4 @@
-FROM cimg/node:20.10-browsers
+FROM cimg/node:22.7.0-browsers
 
 ENV DEBIAN_FRONTEND=noninteractive
 
