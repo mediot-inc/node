@@ -17,6 +17,7 @@ RUN sudo sudo apt-get update \
    && sudo apt-get install -y --no-install-recommends libnss3 libatk1.0-0 libatk-bridge2.0-0 libgtk-3.0 libdrm2 libgbm1 libasound2 \
    # other dependencies
    && sudo apt-get install -y --no-install-recommends ca-certificates graphicsmagick imagemagick ghostscript fonts-noto-cjk build-essential cmake libcairo2 libcairo2-dev libjpeg-dev libpango1.0-dev musl-dev libgif-dev libpixman-1-dev libpangomm-1.4-dev libjpeg-turbo8-dev libfreetype6-dev librsvg2-dev musl \
+   && sudo apt-get install -y libpq-dev \
    && sudo rm -r /var/lib/apt/lists/*
 
 # https://stackoverflow.com/questions/52998331/imagemagick-security-policy-pdf-blocking-conversion
