@@ -6,11 +6,11 @@ docker build . -t mediot/node:<node version>-chrome-<chrome version>-<build vers
 ```
 ## example
 ```
-docker build . -t mediot/node:22.22.0-chrome-119.0.6045.105-0.0.1 -t mediot/node:latest
+docker build . -t mediot/node:24.13.1-chrome-119.0.6045.105-0.0.1 -t mediot/node:latest
 ```
 
 # push command example
 ```
-docker push mediot/node:22.22.0-chrome-119.0.6045.105-0.0.1
+docker push mediot/node:24.13.1-chrome-119.0.6045.105-0.0.1
 docker push mediot/node:latest
 ```
