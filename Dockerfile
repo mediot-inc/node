@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 cimg/node:24.21.0 AS aws
+FROM --platform=linux/amd64 cimg/node:24.22.1 AS aws
 
 ENV DEBIAN_FRONTEND=noninteractive
 ADD https://s3.amazonaws.com/aws-cli/awscli-bundle-1.44.36.zip awscli-bundle.zip
@@ -9,7 +9,7 @@ RUN sudo apt-get update \
    && sudo rm -rf awscli-bundle.zip awscli-bundle \
    && sudo rm -rf /var/lib/apt/lists/*
 
-FROM --platform=linux/amd64 cimg/node:24.21.0
+FROM --platform=linux/amd64 cimg/node:24.22.1
 ENV DEBIAN_FRONTEND=noninteractive
 COPY --from=aws /usr/local/aws /usr/local/aws/
 RUN sudo ln -s /usr/local/aws/bin/aws /usr/local/bin/aws
