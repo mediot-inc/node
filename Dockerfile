@@ -48,8 +48,5 @@ RUN sudo apt-get update \
    libpangomm-1.4-dev \
    && sudo rm -rf /var/lib/apt/lists/*
 
-# https://stackoverflow.com/questions/52998331/imagemagick-security-policy-pdf-blocking-conversion
-RUN sudo sed -i '/disable ghostscript format types/,+6d' /etc/ImageMagick-6/policy.xml
-
 RUN sudo npx @puppeteer/browsers install --path /opt chrome@119.0.6045.105
 RUN sudo ln -s /opt/chrome/linux-119.0.6045.105/chrome-linux64/chrome /usr/local/bin/google-chrome-stable
